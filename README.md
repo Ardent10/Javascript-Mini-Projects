@@ -1,9 +1,5 @@
 # Javascript Projects
+Basic Javascript projects to understand and upskill your knowledge in JS 
+We can implement many functionalities using CSS but using JS it is more 
+fun.
 
-#### Support
-
-Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
-
-## You can see all projects in action here
-
-[Projects](https://www.vanillajavascriptprojects.com/)
