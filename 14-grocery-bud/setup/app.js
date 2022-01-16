@@ -21,6 +21,20 @@ function addItem(e){
     e.preventDefault();
     // console.log(grocery.value);
     const value=grocery.value;
+    const id = new Date().getTime().toString();
+    // console.log(id);
+
+    if(value && !editFlag){
+        console.log("Add item to list");
+    }
+    else if(value && editFlag){
+        console.log("editing");
+    }
+    else
+    {
+        alert.textContent= "Empty Value";
+        // console.log("Empty value");
+    }
 }
 
 
