@@ -25,16 +25,29 @@ function addItem(e){
     // console.log(id);
 
     if(value && !editFlag){
-        console.log("Add item to list");
+        // console.log("Add item to list");
+        
     }
     else if(value && editFlag){
         console.log("editing");
     }
     else
     {
-        alert.textContent= "Empty Value";
+        displayAlert('Please enter value', 'danger' );   
         // console.log("Empty value");
     }
+}
+
+//DISPLAY ALERT 
+function displayAlert(text,action){
+    alert.textContent= text;
+    alert.classList.add(`alert-${action}`);
+    
+    //remove alert
+    setTimeout(function(){
+      alert.textContent="";
+      alert.classList.remove(`alert-${action}`);  
+    },1000);
 }
 
 
