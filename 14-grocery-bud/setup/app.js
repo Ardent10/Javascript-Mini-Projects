@@ -40,8 +40,15 @@ function addItem(e){
           <button type="button" class="delete-btn"><i class="fas fa-trash"></i></button>
         </div>`;
         
+        const deletBtn = element.querySelector('.delete-btn');
+        const editBtn = element.querySelector('.edit-btn');
+
+        deletBtn.addEventListener("click", deleteItem);
+        editBtn.addEventListener("click", editItem);
+
         //append child
         list.appendChild(element);
+
         //display alert
         displayAlert('Item added to the list', 'success');   
 
@@ -88,6 +95,26 @@ function clearItems(){
     setBackToDefault();
 }
 
+//Edit function
+function editItem(e){
+    console.log("Edit");
+}
+
+//Delete function
+function deleteItem(e){
+//  console.log("Delete");  
+    const element = e.currentTarget.parentElement.parentElement;
+    const id = element.dataset.id;
+    list.removeChild(element);
+    if(list.children.length===0){
+        container.classList.remove("show-container");
+    }
+    displayAlert("Item removed", "danger");
+    setBackToDefault();
+
+    removeFromLocalStorage(id);
+}
+
 
 
 // set back to default
@@ -108,4 +135,7 @@ function addToLocalStorage(id,value){
 }
 
 
+function removeFromLocalStorage(id){
+     console.log(id);
+}
 // ****** SETUP ITEMS **********
